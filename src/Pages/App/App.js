@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, Switch, Redirect } from "react-router-dom";
-import userService from "../../utils/userService";
+import userservice from "../../utils/userservice";
 import HomePage from "../../Pages/HomePage/HomePage";
 import LandingPage from "../../Pages/LandingPage/LandingPage";
 
@@ -10,7 +10,7 @@ class App extends Component {
     super();
     this.state = {
       days: [],
-      user: userService.getUser(),
+      user: userservice.getUser(),
       date: this.getCurrentDate(),
     };
   }
@@ -25,12 +25,12 @@ class App extends Component {
     return today.toLocaleDateString(undefined, options);
   }
   handleLogout = () => {
-    userService.logout();
+    userservice.logout();
     this.setState({ user: null });
   };
 
   handleSignupOrLogin = () => {
-    this.setState({ user: userService.getUser() });
+    this.setState({ user: userservice.getUser() });
   };
   render() {
     return (
