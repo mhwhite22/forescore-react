@@ -6,8 +6,8 @@ import styles from "./HomePage.css"
 const HomePage = (props) => {
     return (
         <div className="HomePage">
-        <h2>Hello, User</h2>
         <Navbar />
+        <h2>Hello, User</h2>
         </div>
     )
 }

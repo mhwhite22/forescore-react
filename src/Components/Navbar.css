@@ -1,9 +1,10 @@
-.sidenav{
+.main-nav{
     background-color: #282c34;
-    opacity: 0.5;
+    margin-left: 0;
+    opacity: 0.8;
     color: white;
     font-size: 20px;
-    width: 20vw;
+    width: 15vw;
     max-width: 25vw;
     height: 100%;
 }
