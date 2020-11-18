@@ -1,0 +1,12 @@
+.main-footer {
+    margin-bottom: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 5vh;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+  }
