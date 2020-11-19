@@ -1,0 +1,11 @@
+.CourseFormPage{
+    background-image: url('../../imgs/green.jpg');
+    background-size: cover;
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+

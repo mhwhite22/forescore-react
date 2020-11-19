@@ -9,13 +9,13 @@ function mainNavbar(props) {
         <nav className="main-nav"
         >
         <h1>ForeScore</h1>
-        <NavLink to='/home'>Rounds</NavLink>
+        <NavLink to='/rounds'>Rounds</NavLink>
         <br></br>
         <NavLink to='/courses'>Courses</NavLink>
         <br></br>
-        <NavLink to='/home'>New Round</NavLink>
+        <NavLink to='/addround'>New Round</NavLink>
         <br></br>
-        <NavLink to='/home'>New Course</NavLink>
+        <NavLink to='/addcourse'>New Course</NavLink>
         <br></br>
         <NavLink to='/home'>Profile</NavLink> 
         </nav>

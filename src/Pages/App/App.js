@@ -5,6 +5,9 @@ import userservice from "../../utils/userservice";
 import HomePage from "../../Pages/HomePage/HomePage";
 import LandingPage from "../../Pages/LandingPage/LandingPage";
 import CoursesPage from "../../Pages/CoursesPage/CoursesPage";
+import RoundsPage from "../../Pages/RoundsPage/RoundsPage";
+import RoundFormPage from "../../Pages/RoundFormPage/RoundFormPage";
+import CourseFormPage from "../../Pages/CourseFormPage/CourseFormPage";
 
 class App extends Component {
   constructor() {
@@ -48,6 +51,18 @@ class App extends Component {
           <Route
           exact path="/courses"
           render={() => <CoursesPage />}
+          />
+          <Route
+          exact path="/rounds"
+          render={() => <RoundsPage />}
+          />
+          <Route
+          exact path="/addround"
+          render={() => <RoundFormPage />}
+          />
+          <Route
+          exact path="/addcourse"
+          render={() => <CourseFormPage />}
           />
         </Switch>
 
