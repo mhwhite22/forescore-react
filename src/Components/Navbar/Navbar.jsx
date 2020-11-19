@@ -11,7 +11,7 @@ function mainNavbar(props) {
         <h1>ForeScore</h1>
         <NavLink to='/home'>Rounds</NavLink>
         <br></br>
-        <NavLink to='/home'>Courses</NavLink>
+        <NavLink to='/courses'>Courses</NavLink>
         <br></br>
         <NavLink to='/home'>New Round</NavLink>
         <br></br>

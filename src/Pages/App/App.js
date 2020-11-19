@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import userservice from "../../utils/userservice";
 import HomePage from "../../Pages/HomePage/HomePage";
 import LandingPage from "../../Pages/LandingPage/LandingPage";
+import CoursesPage from "../../Pages/CoursesPage/CoursesPage";
 
 class App extends Component {
   constructor() {
@@ -43,6 +44,10 @@ class App extends Component {
           <Route
           exact path="/home"
           render={() => <HomePage/> }
+          />
+          <Route
+          exact path="/courses"
+          render={() => <CoursesPage />}
           />
         </Switch>
 
