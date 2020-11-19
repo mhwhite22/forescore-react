@@ -14,7 +14,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      days: [],
+      rounds: [],
+      courses: [],
       user: userservice.getUser(),
       date: this.getCurrentDate(),
     };
