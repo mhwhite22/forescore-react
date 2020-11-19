@@ -8,6 +8,7 @@ import CoursesPage from "../../Pages/CoursesPage/CoursesPage";
 import RoundsPage from "../../Pages/RoundsPage/RoundsPage";
 import RoundFormPage from "../../Pages/RoundFormPage/RoundFormPage";
 import CourseFormPage from "../../Pages/CourseFormPage/CourseFormPage";
+import ProfilePage from "../../Pages/ProfilePage/ProfilePage";
 
 class App extends Component {
   constructor() {
@@ -63,6 +64,10 @@ class App extends Component {
           <Route
           exact path="/addcourse"
           render={() => <CourseFormPage />}
+          />
+          <Route
+          exact path="/profile"
+          render={() => <ProfilePage />}
           />
         </Switch>
 
