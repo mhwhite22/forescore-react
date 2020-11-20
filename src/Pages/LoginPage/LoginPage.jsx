@@ -20,7 +20,7 @@ class LoginPage extends Component {
     try {
       await userService.login(this.state);
       this.props.handleSignupOrLogin();
-      this.props.history.push("/user");
+      this.props.history.push("/home");
     } catch (err) {
       alert("Invalid login");
     }
