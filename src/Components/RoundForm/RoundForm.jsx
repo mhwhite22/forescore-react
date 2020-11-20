@@ -40,3 +40,5 @@ class RoundForm extends Component {
         )
     }
 }
+
+export default RoundForm;
