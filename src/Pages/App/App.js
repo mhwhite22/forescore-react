@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, Switch, Redirect } from "react-router-dom";
-import userservice from "../../utils/userservice";
+import userService from "../../utils/userService";
 import HomePage from "../../Pages/HomePage/HomePage";
 import LandingPage from "../../Pages/LandingPage/LandingPage";
 import CoursesPage from "../../Pages/CoursesPage/CoursesPage";
@@ -9,6 +9,9 @@ import RoundsPage from "../../Pages/RoundsPage/RoundsPage";
 import RoundFormPage from "../../Pages/RoundFormPage/RoundFormPage";
 import CourseFormPage from "../../Pages/CourseFormPage/CourseFormPage";
 import ProfilePage from "../../Pages/ProfilePage/ProfilePage";
+import LoginPage from "../../Pages/LoginPage/LoginPage";
+import SignupPage from "../../Pages/SignupPage/SignupPage";
+
 
 class App extends Component {
   constructor() {
@@ -16,7 +19,7 @@ class App extends Component {
     this.state = {
       rounds: [],
       courses: [],
-      user: userservice.getUser(),
+      user: userService.getUser(),
       date: this.getCurrentDate(),
     };
   }
@@ -31,12 +34,12 @@ class App extends Component {
     return today.toLocaleDateString(undefined, options);
   }
   handleLogout = () => {
-    userservice.logout();
+    userService.logout();
     this.setState({ user: null });
   };
 
   handleSignupOrLogin = () => {
-    this.setState({ user: userservice.getUser() });
+    this.setState({ user: userService.getUser() });
   };
   render() {
     return (
@@ -45,6 +48,26 @@ class App extends Component {
           <Route
           exact path="/"
           render={() => <LandingPage /> }
+          />
+          <Route
+            exact
+            path="/login"
+            render={({ history }) => (
+              <LoginPage
+                history={history}
+                handleSignupOrLogin={this.handleSignupOrLogin}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/signup"
+            render={({ history }) => (
+              <SignupPage
+                history={history}
+                handleSignupOrLogin={this.handleSignupOrLogin}
+              />
+            )}
           />
           <Route
           exact path="/home"

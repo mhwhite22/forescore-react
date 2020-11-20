@@ -6,7 +6,8 @@ const LandingPage = (props) => {
     return (
         <div className="LandingPage">
         <h1>Welcome to ForeScore</h1>
-        <Link to ='/home'>Home</Link>
+        <Link to ='/login'>Login</Link>
+        <Link to='/signup'>Sign Up Here</Link>
         </div>
     )
 }
