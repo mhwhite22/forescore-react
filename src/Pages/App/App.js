@@ -71,7 +71,16 @@ class App extends Component {
           />
           <Route
           exact path="/home"
-          render={() => <HomePage/> }
+          render={( {history }) =>
+            userService.getUser() ? (
+              <HomePage
+                history={history}
+                currentDate={this.getCurrentDate}
+                handleLogout={this.handleLogout}
+              />
+             ) : (
+               <Redirect to="/" />
+             ) }
           />
           <Route
           exact path="/courses"

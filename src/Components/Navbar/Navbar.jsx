@@ -17,7 +17,9 @@ function mainNavbar(props) {
         <br></br>
         <NavLink to='/addcourse'>New Course</NavLink>
         <br></br>
-        <NavLink to='/home'>Profile</NavLink> 
+        <NavLink to='/home'>Profile</NavLink>
+        <br></br>
+        <NavLink to='' onClick={props.handleLogout}>Log Out</NavLink>
         </nav>
     )
 }

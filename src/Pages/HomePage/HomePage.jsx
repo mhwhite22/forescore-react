@@ -9,7 +9,9 @@ import Greeting from "../../Components/Greeting/Greeting";
 const HomePage = (props) => {
     return (
         <div className="HomePage">
-        <Navbar />
+        <Navbar 
+            handleLogout={props.handleLogout}
+            />
         <Greeting />
         <Footer />
         </div>
