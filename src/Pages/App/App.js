@@ -11,7 +11,7 @@ import CourseFormPage from "../../Pages/CourseFormPage/CourseFormPage";
 import ProfilePage from "../../Pages/ProfilePage/ProfilePage";
 import LoginPage from "../../Pages/LoginPage/LoginPage";
 import SignupPage from "../../Pages/SignupPage/SignupPage";
-
+import * as roundsAPI from "../../services/rounds-api";
 
 class App extends Component {
   constructor() {
@@ -23,6 +23,7 @@ class App extends Component {
       date: this.getCurrentDate(),
     };
   }
+
   getCurrentDate() {
     const today = new Date();
     const options = {
@@ -33,6 +34,17 @@ class App extends Component {
     };
     return today.toLocaleDateString(undefined, options);
   }
+
+  handleAddRound = async (newRoundData) => {
+    const newRound = await roundsAPI.create(newRoundData);
+    this.setState(
+      (state) => ({
+        rounds: [...state.rounds, newRound],
+      }),
+      () => this.props.history.push("/home")
+    );
+  };
+
   handleLogout = () => {
     userService.logout();
     this.setState({ user: null });
@@ -41,6 +53,11 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({ user: userService.getUser() });
   };
+
+
+
+
+
   render() {
     return (
       <div className="App">

@@ -14,3 +14,9 @@ a{
     text-decoration: none;
     padding: 20px 20px 20px 20px;
 }
+
+.logo{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}

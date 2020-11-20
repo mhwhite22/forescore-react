@@ -1,14 +1,14 @@
 import React from 'react';
 import 'materialize-css';
 import { Navbar, Icon } from 'react-materialize';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import styles from './Navbar.css';
 
 function mainNavbar(props) {
     return (
-        <nav className="main-nav"
-        >
-        <h1>ForeScore</h1>
+        <nav className="main-nav">
+        <Link className="logo">ForeScore</Link>
+        <br></br>
         <NavLink to='/rounds'>Rounds</NavLink>
         <br></br>
         <NavLink to='/courses'>Courses</NavLink>
