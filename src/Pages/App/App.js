@@ -54,6 +54,10 @@ class App extends Component {
     this.setState({ user: userService.getUser() });
   };
 
+  async componentDidMount() {
+    const rounds = await roundsAPI.getAll();
+    this.setState({rounds});
+  }
 
 
 
@@ -101,11 +105,23 @@ class App extends Component {
           />
           <Route
           exact path="/courses"
-          render={() => <CoursesPage />}
+          render={( {history} ) => 
+          userService.getUser() ? (
+          <CoursesPage />
+          ) : (
+            <Redirect to="/" />
+          )
+          }
           />
           <Route
           exact path="/rounds"
-          render={() => <RoundsPage />}
+          render={( {history} ) =>
+          userService.getUser() ? (
+           <RoundsPage rounds={this.state.rounds} />
+          ) : (
+            <Redirect to="/" />
+          )
+          }
           />
           <Route
           exact path="/addround"

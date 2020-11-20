@@ -4,7 +4,8 @@ const roundsCtrl = require('../../controllers/api/rounds');
 
 router.use(require('../../config/auth'));
 
-router.post('/', daysCtrl.create);
+router.post('/', roundsCtrl.create);
+router.get('/', roundsCtrl.index);
 
 
 function checkAuth(req, res, next) {

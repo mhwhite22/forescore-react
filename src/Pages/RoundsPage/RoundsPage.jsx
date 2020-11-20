@@ -7,8 +7,9 @@ function RoundsPage(props) {
     return (
         <div className="RoundsPage">
             <Navbar />
-            <h2>Hi I'm the rounds page</h2>
-            <h5>I can show you all your rounds</h5>
+            <h2>My Rounds</h2>
+            <div className='RoundsPage-grid'>
+            </div>
         </div>
     )
 }
