@@ -6,10 +6,9 @@ import styles from './RoundsPage.css'
 
 function RoundsPage(props) {
     return (
-        <>
-            <h2>My Rounds</h2>
+        <div className='RoundsPage'>
             <Navbar />
-            <div className='RoundsPage-grid'>
+            <h2>My Rounds</h2>
                 {props.rounds.map(round =>
                     <RoundListItem
                     round={round}
@@ -17,7 +16,6 @@ function RoundsPage(props) {
                     />
                 )}
         </div>
-        </>
     );
 }
 
