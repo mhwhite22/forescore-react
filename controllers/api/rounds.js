@@ -1,4 +1,4 @@
-const Day = require('../../models/round');
+const Round = require('../../models/round');
 const { default: RoundForm } = require('../../src/Components/RoundForm/RoundForm');
 
 module.exports = {

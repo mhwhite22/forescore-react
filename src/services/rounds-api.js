@@ -1,4 +1,4 @@
-const BASE_URL = '/api/days';
+const BASE_URL = '/api/rounds';
 
 export function getAll() {
     return fetch(BASE_URL)
@@ -9,6 +9,6 @@ export function create(round) {
     return fetch(BASE_URL, {
         method: 'POST',
         headers: {'content-type': 'application/json'},
-        body: JSON.stringify(day)
+        body: JSON.stringify(round)
     }).then(res => res.json());
 }

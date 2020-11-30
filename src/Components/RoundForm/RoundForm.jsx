@@ -34,8 +34,29 @@ class RoundForm extends Component {
     
     render(){
         return(
-            <div className="RoundForm">
-                <header className="header">Add A New Round</header>
+            <div className="RoundForm-container card">
+                <div className="RoundForm">
+                <header className="header-footer">Add A New Round</header>
+                <form
+                    ref={this.formRef}
+                    className="form-horizontal"
+                    onSubmit={this.handleSubmit}
+                    >
+                    <div className="form-group">
+                        <div className="col-sm-12">
+                            <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Date of Play"
+                            value={this.state.formData.dateOfPlay}
+                            name="dateOfPlay"
+                            onChange={this.handleChange}
+                            />
+                        </div>
+                    </div>
+                    
+                    </form>
+                </div>
             </div>
         )
     }
