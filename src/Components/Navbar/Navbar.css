@@ -9,14 +9,17 @@
     height: 100%;
 }
 
-a{
+.navlink{
     color: white;
     text-decoration: none;
-    padding: 20px 20px 20px 20px;
+    /* padding: 20px 20px 20px 20px; */
+    /* this padding was causing a misalignment of link text with the anchors they were meant to label*/
+    margin-left: 0.4em;
 }
 
 .logo{
     color: white;
     font-weight: bold;
     font-size: 1.5em;
+    margin-left: 0.2em;
 }

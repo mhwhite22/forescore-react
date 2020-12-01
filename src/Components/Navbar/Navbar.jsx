@@ -7,19 +7,19 @@ import styles from './Navbar.css';
 function mainNavbar(props) {
     return (
         <nav className="main-nav">
-        <Link className="logo">ForeScore</Link>
+        <Link className="logo" to='/home'>ForeScore</Link>
         <br></br>
-        <NavLink to='/rounds'>Rounds</NavLink>
+        <Link className="navlink" to='/rounds'>Rounds</Link>
         <br></br>
-        <NavLink to='/courses'>Courses</NavLink>
+        <Link className="navlink" to='/courses'>Courses</Link>
         <br></br>
-        <NavLink to='/addround'>New Round</NavLink>
+        <Link className="navlink" to='/addround'>New Round</Link>
         <br></br>
-        <NavLink to='/addcourse'>New Course</NavLink>
+        <Link className="navlink" to='/addcourse'>New Course</Link>
         <br></br>
-        <NavLink to='/home'>Profile</NavLink>
+        <Link className="navlink" to='/home'>Profile</Link>
         <br></br>
-        <NavLink to='' onClick={props.handleLogout}>Log Out</NavLink>
+        <Link className="navlink" to='' onClick={props.handleLogout}>Log Out</Link>
         </nav>
     )
 }
