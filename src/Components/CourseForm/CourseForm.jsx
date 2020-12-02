@@ -39,7 +39,7 @@ class CourseForm extends Component {
               <div className="CourseForm">
                   <header className="header-footer">Add A New Course</header>
                   <form
-                    ref={this.formRef}
+                    // ref={this.formRef}
                     className="form-horizontal"
                     onSubmit={this.handleSubmit}
                     >
@@ -49,6 +49,7 @@ class CourseForm extends Component {
                             type="text"
                             className="form-control"
                             placeholder="Course Name"
+                            name="name"
                             value={this.state.formData.name}
                             onChange={this.handleChange}
                           />
@@ -60,6 +61,7 @@ class CourseForm extends Component {
                             type="text"
                             className="form-control"
                             placeholder="Course Location"
+                            name="location"
                             value={this.state.formData.location}
                             onChange={this.handleChange}
                           />
@@ -71,6 +73,7 @@ class CourseForm extends Component {
                             type="text"
                             className="form-control"
                             placeholder="Par"
+                            name="par"
                             value={this.state.formData.par}
                             onChange={this.handleChange}
                           />
@@ -82,6 +85,7 @@ class CourseForm extends Component {
                             type="text"
                             className="form-control"
                             placeholder="Yardage"
+                            name="yardage"
                             value={this.state.formData.yardage}
                             onChange={this.handleChange}
                           />
@@ -93,6 +97,7 @@ class CourseForm extends Component {
                             type="text"
                             className="form-control"
                             placeholder="Slope"
+                            name="slope"
                             value={this.state.formData.slope}
                             onChange={this.handleChange}
                           />
@@ -104,6 +109,7 @@ class CourseForm extends Component {
                             type="text"
                             className="form-control"
                             placeholder="Holes"
+                            name="numHoles"
                             value={this.state.formData.numHoles}
                             onChange={this.handleChange}
                             />
