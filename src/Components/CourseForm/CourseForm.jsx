@@ -98,7 +98,6 @@ class CourseForm extends Component {
                           />
                         </div>
                       </div>
-                    </form>
                     <div className="form-group">
                         <div className="col-sm-12">
                           <input
@@ -107,9 +106,15 @@ class CourseForm extends Component {
                             placeholder="Holes"
                             value={this.state.formData.numHoles}
                             onChange={this.handleChange}
-                          />
+                            />
                         </div>
                       </div>
+                      <div className="form-group">
+                        <div className="col-sm-12 text-center">
+                          <button className="btn btn-default">Submit</button>
+                        </div>
+                      </div>
+                </form>
               </div>
           )
       }
