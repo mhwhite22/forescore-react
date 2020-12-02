@@ -12,6 +12,7 @@ import ProfilePage from "../../Pages/ProfilePage/ProfilePage";
 import LoginPage from "../../Pages/LoginPage/LoginPage";
 import SignupPage from "../../Pages/SignupPage/SignupPage";
 import * as roundsAPI from "../../services/rounds-api";
+import * as coursesAPI from "../../services/courses-api";
 
 class App extends Component {
   constructor() {
@@ -40,6 +41,16 @@ class App extends Component {
     this.setState(
       (state) => ({
         rounds: [...state.rounds, newRound],
+      }),
+      () => this.props.history.push("/home")
+    );
+  };
+
+  handleAddCourse = async (newCourseData) => {
+    const newCourse = await courseAPI.create(newCourseData);
+    this.setState(
+      (state) => ({
+        courses: [...state.courses, newCourse],
       }),
       () => this.props.history.push("/home")
     );

@@ -18,7 +18,7 @@ class CourseForm extends Component {
     handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          await this.props.handleAddDay(this.state.formData);
+          await this.props.handleAddCourse(this.state.formData);
         } catch (err) {
           console.log(err);
         }
