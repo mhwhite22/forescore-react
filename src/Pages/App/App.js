@@ -136,13 +136,19 @@ class App extends Component {
           />
           <Route
           exact path="/addround"
-          render={() => <RoundFormPage />}
+          render={( {history} ) => 
+            userService.getUser() ? (
+          <RoundFormPage handleAddRound={this.handleAddRound} />
+            ) : (
+              <Redirect to="/" />
+            )
+          }
           />
           <Route
           exact path="/addcourse"
           render={( { history }) => 
             userService.getUser() ? (
-            <CourseFormPage handleAddRound={this.handleAddRound} />
+            <CourseFormPage handleAddCourse={this.handleAddCourse} />
             ) : (
               <Redirect to="/" />
             )
