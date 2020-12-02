@@ -47,7 +47,7 @@ class App extends Component {
   };
 
   handleAddCourse = async (newCourseData) => {
-    const newCourse = await courseAPI.create(newCourseData);
+    const newCourse = await coursesAPI.create(newCourseData);
     this.setState(
       (state) => ({
         courses: [...state.courses, newCourse],

@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const coursesCtrl = require('../../controllers/api/rounds');
+const coursesCtrl = require('../../controllers/api/courses');
 
 router.use(require('../../config/auth'));
 
-router.post('/', roundsCtrl.create);
-router.get('/', roundsCtrl.index);
+router.post('/', coursesCtrl.create);
+router.get('/', coursesCtrl.index);
 
 function checkAuth(req, res, next) {
     if (req.user) return next();

@@ -39,7 +39,7 @@ class CourseForm extends Component {
               <div className="CourseForm">
                   <header className="header-footer">Add A New Course</header>
                   <form
-                    // ref={this.formRef}
+                    ref={this.formRef}
                     className="form-horizontal"
                     onSubmit={this.handleSubmit}
                     >

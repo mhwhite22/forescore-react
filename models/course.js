@@ -4,20 +4,20 @@ const Schema = mongoose.Schema;
 
 const holeSchema = new Schema({
   holeNum: String,
-  yardage: Number,
-  par: { type: Number, required: true, min: 3, max: 5 },
-  handicap: Number,
-  strokes: Number,
+  yardage: String,
+  par: { type: String, required: true, min: 3, max: 5 },
+  handicap: String,
+  strokes: String,
 });
 
 const courseSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: "User" },
   name: String,
   location: String,
-  par: { type: Number, required: true, min: 34, max: 73 },
-  yardage: Number,
-  slope: Number,
-  numHoles: Number,
+  par: { type: String, required: true, min: 34, max: 73 },
+  yardage: String,
+  slope: String,
+  numHoles: String,
   holes: [holeSchema],
 });
 
