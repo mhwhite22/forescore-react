@@ -6,8 +6,7 @@ class RoundForm extends Component {
         formData: { 
             course: "",
             score: "",
-            dateOfPlay: "",
-            user: "",
+            dateOfPlay: ""
         }
     }
 
@@ -54,7 +53,35 @@ class RoundForm extends Component {
                             />
                         </div>
                     </div>
-                    
+                    <div className="form-group">
+                        <div className="col-sm-12">
+                            <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Course"
+                            value={this.state.formData.course}
+                            name="course"
+                            onChange={this.handleChange}
+                            />
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <div className="col-sm-12">
+                            <input
+                            type="text"
+                            className="form-control"
+                            placeholder="Score"
+                            value={this.state.formData.score}
+                            name="score"
+                            onChange={this.handleChange}
+                            />
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <div className="col-sm-12 text-center">
+                          <button className="btn btn-default">Submit</button>
+                        </div>
+                      </div>
                     </form>
                 </div>
             </div>
