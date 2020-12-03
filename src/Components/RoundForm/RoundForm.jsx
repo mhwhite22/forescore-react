@@ -1,14 +1,29 @@
 import React, { Component } from "react";
+import Select from 'react-select';
 import { Link } from "react-router-dom";
 
 class RoundForm extends Component {
     state = {
+        selectOptions: [],
         formData: { 
             course: "",
             score: "",
             dateOfPlay: ""
         }
     }
+
+    getOptions(){
+      const options = this.props.courses.map(c => ({
+        "value": c._id,
+        "label": c.name
+      }));
+      this.setState({selectOptions: options})
+    }
+
+    componentDidMount(){
+      this.getOptions()
+    }
+
 
     formRef = React.createRef();
 
@@ -32,6 +47,7 @@ class RoundForm extends Component {
       };
     
     render(){
+      console.log(this.state.selectOptions)
         return(
             <div className="RoundForm-container card">
                 <div className="RoundForm">
@@ -55,14 +71,26 @@ class RoundForm extends Component {
                     </div>
                     <div className="form-group">
                         <div className="col-sm-12">
-                            <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Course"
-                            value={this.state.formData.course}
-                            name="course"
-                            onChange={this.handleChange}
-                            />
+                          <div className="select-container">
+                          <select
+                           placeholder="course"
+                           className="form-control"
+                           value={this.state.formData.course}
+                           name="course"
+                           onChange={this.handleChange}
+                           >
+                           {this.state.selectOptions.map((option) => (
+                             <option value={option.value}>{option.label}</option>
+                           ))}
+                           </select>
+                           {/* <Select 
+                              options={this.state.selectOptions}
+                              placeholder="course"
+                              name="course"
+                              onChange={this.handleChange}
+                              value={this.state.formData.course}
+                            /> */}
+                            </div>
                         </div>
                     </div>
                     <div className="form-group">

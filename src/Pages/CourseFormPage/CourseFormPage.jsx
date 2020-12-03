@@ -15,7 +15,7 @@ class CourseFormPage extends Component {
         return(
             <div className="CourseFormPage">
             <Navbar />
-            <CourseForm {...this.props } />
+            <CourseForm { ...this.props } />
             <Link to='/home'>Back</Link>
             </div>
         );

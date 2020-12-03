@@ -128,7 +128,9 @@ class App extends Component {
           exact path="/rounds"
           render={( {history} ) =>
           userService.getUser() ? (
-           <RoundsPage rounds={this.state.rounds} />
+           <RoundsPage 
+              rounds={this.state.rounds}
+            />
           ) : (
             <Redirect to="/" />
           )
@@ -138,7 +140,10 @@ class App extends Component {
           exact path="/addround"
           render={( {history} ) => 
             userService.getUser() ? (
-          <RoundFormPage handleAddRound={this.handleAddRound} />
+          <RoundFormPage 
+            handleAddRound={this.handleAddRound}
+            courses={this.state.courses}
+           />
             ) : (
               <Redirect to="/" />
             )
