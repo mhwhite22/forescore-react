@@ -23,11 +23,15 @@ import styles from './RoundListItem.css';
 
 function RoundListItem( { round, courses } ) {
     return (
-        console.log(round, courses),
         <div className="roundListItem">
-            <p>{round.dateOfPlay} at { courses.map( course => course._id === round.course )} </p>
-        </div>
-    );
+            <p>{round.dateOfPlay} at { courses.map((course) => { 
+                if (course._id === round.course){
+                    return course.name
+                }
+            })
+        }</p>
+    </div>
+    )
 }
 
 export default RoundListItem;
