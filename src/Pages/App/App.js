@@ -132,6 +132,7 @@ class App extends Component {
           userService.getUser() ? (
            <RoundsPage 
               rounds={this.state.rounds}
+              courses={this.state.courses}
             />
           ) : (
             <Redirect to="/" />

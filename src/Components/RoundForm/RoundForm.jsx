@@ -78,6 +78,7 @@ class RoundForm extends Component {
                            name="course"
                            onChange={this.handleChange}
                            >
+                          <option default>Select Course</option>
                            {this.state.selectOptions.map((option) => (
                              <option value={option.value}>{option.label}</option>
                            ))}
