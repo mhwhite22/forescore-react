@@ -12,7 +12,7 @@ const HomePage = (props) => {
         <Navbar 
             handleLogout={props.handleLogout}
             />
-        <Greeting />
+        <Greeting handle={props.handle}/>
         <Footer />
         </div>
     )
