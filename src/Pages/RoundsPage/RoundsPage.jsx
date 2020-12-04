@@ -13,6 +13,7 @@ function RoundsPage(props) {
                     <RoundListItem
                     round={round}
                     key={round._id}
+                    courses={props.courses}
                     />
                 )}
         </div>

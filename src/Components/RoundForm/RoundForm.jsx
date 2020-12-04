@@ -1,14 +1,28 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+
 
 class RoundForm extends Component {
     state = {
+        selectOptions: [],
         formData: { 
             course: "",
             score: "",
             dateOfPlay: ""
         }
     }
+
+    getOptions(){
+      const options = this.props.courses.map(c => ({
+        "value": c._id,
+        "label": c.name
+      }));
+      this.setState({selectOptions: options})
+    }
+
+    componentDidMount(){
+      this.getOptions()
+    }
+
 
     formRef = React.createRef();
 
@@ -20,6 +34,7 @@ class RoundForm extends Component {
           console.log(err);
         }
       };
+    
     
     handleChange = (e) => {
         const formData = {
@@ -55,14 +70,20 @@ class RoundForm extends Component {
                     </div>
                     <div className="form-group">
                         <div className="col-sm-12">
-                            <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Course"
-                            value={this.state.formData.course}
-                            name="course"
-                            onChange={this.handleChange}
-                            />
+                          <div className="select-container">
+                          <select
+                           className="form-control"
+                           placeholder="Course"
+                           value={this.state.formData.course}
+                           name="course"
+                           onChange={this.handleChange}
+                           >
+                          <option default>Select Course</option>
+                           {this.state.selectOptions.map((option) => (
+                             <option value={option.value}>{option.label}</option>
+                           ))}
+                           </select>
+                            </div>
                         </div>
                     </div>
                     <div className="form-group">

@@ -12,6 +12,7 @@ import ProfilePage from "../../Pages/ProfilePage/ProfilePage";
 import LoginPage from "../../Pages/LoginPage/LoginPage";
 import SignupPage from "../../Pages/SignupPage/SignupPage";
 import * as roundsAPI from "../../services/rounds-api";
+import * as coursesAPI from "../../services/courses-api";
 
 class App extends Component {
   constructor() {
@@ -45,6 +46,16 @@ class App extends Component {
     );
   };
 
+  handleAddCourse = async (newCourseData) => {
+    const newCourse = await coursesAPI.create(newCourseData);
+    this.setState(
+      (state) => ({
+        courses: [...state.courses, newCourse],
+      }),
+      () => this.props.history.push("/home")
+    );
+  };
+
   handleLogout = () => {
     userService.logout();
     this.setState({ user: null });
@@ -56,7 +67,9 @@ class App extends Component {
 
   async componentDidMount() {
     const rounds = await roundsAPI.getAll();
+    const courses = await coursesAPI.getAll();
     this.setState({rounds});
+    this.setState({courses});
   }
 
 
@@ -117,7 +130,10 @@ class App extends Component {
           exact path="/rounds"
           render={( {history} ) =>
           userService.getUser() ? (
-           <RoundsPage rounds={this.state.rounds} />
+           <RoundsPage 
+              rounds={this.state.rounds}
+              courses={this.state.courses}
+            />
           ) : (
             <Redirect to="/" />
           )
@@ -125,13 +141,22 @@ class App extends Component {
           />
           <Route
           exact path="/addround"
-          render={() => <RoundFormPage />}
+          render={( {history} ) => 
+            userService.getUser() ? (
+          <RoundFormPage 
+            handleAddRound={this.handleAddRound}
+            courses={this.state.courses}
+           />
+            ) : (
+              <Redirect to="/" />
+            )
+          }
           />
           <Route
           exact path="/addcourse"
           render={( { history }) => 
             userService.getUser() ? (
-            <CourseFormPage handleAddRound={this.handleAddRound} />
+            <CourseFormPage handleAddCourse={this.handleAddCourse} />
             ) : (
               <Redirect to="/" />
             )
