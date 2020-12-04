@@ -112,6 +112,7 @@ class App extends Component {
                 history={history}
                 currentDate={this.getCurrentDate}
                 handleLogout={this.handleLogout}
+                handle={this.state.user.name}
               />
              ) : (
                <Redirect to="/" />
