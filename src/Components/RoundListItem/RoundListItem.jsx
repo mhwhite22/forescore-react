@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './RoundListItem.css';
+import { formatDate } from "../../utils/utilities";
 
 // function RoundListItem( { round } ) {
 //     return (
@@ -24,7 +25,7 @@ import styles from './RoundListItem.css';
 function RoundListItem( { round, courses } ) {
     return (
         <div className="roundListItem">
-            <p>{round.dateOfPlay} at { courses.map((course) => { 
+            <p>{ formatDate(round.dateOfPlay) } at { courses.map((course) => { 
                 if (course._id === round.course){
                     return course.name
                 }
