@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Select from 'react-select';
-import { Link } from "react-router-dom";
+
 
 class RoundForm extends Component {
     state = {
@@ -36,6 +35,7 @@ class RoundForm extends Component {
         }
       };
     
+    
     handleChange = (e) => {
         const formData = {
           ...this.state.formData,
@@ -47,7 +47,6 @@ class RoundForm extends Component {
       };
     
     render(){
-      console.log(this.state.selectOptions)
         return(
             <div className="RoundForm-container card">
                 <div className="RoundForm">
@@ -73,8 +72,8 @@ class RoundForm extends Component {
                         <div className="col-sm-12">
                           <div className="select-container">
                           <select
-                           placeholder="course"
                            className="form-control"
+                           placeholder="Course"
                            value={this.state.formData.course}
                            name="course"
                            onChange={this.handleChange}
@@ -83,13 +82,6 @@ class RoundForm extends Component {
                              <option value={option.value}>{option.label}</option>
                            ))}
                            </select>
-                           {/* <Select 
-                              options={this.state.selectOptions}
-                              placeholder="course"
-                              name="course"
-                              onChange={this.handleChange}
-                              value={this.state.formData.course}
-                            /> */}
                             </div>
                         </div>
                     </div>

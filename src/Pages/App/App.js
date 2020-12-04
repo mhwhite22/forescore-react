@@ -67,7 +67,9 @@ class App extends Component {
 
   async componentDidMount() {
     const rounds = await roundsAPI.getAll();
+    const courses = await coursesAPI.getAll();
     this.setState({rounds});
+    this.setState({courses});
   }
 
 
