@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import styles from "./CourseForm.css";
 
 class CourseForm extends Component {
@@ -36,11 +37,11 @@ class CourseForm extends Component {
 
       render() {
           return (
-              <div className="CourseForm">
-                  <header className="header-footer">Add A New Course</header>
+              <div className="CourseForm-container card">
+                  <header className="header">Add A New Course</header>
                   <form
                     ref={this.formRef}
-                    className="form-horizontal"
+                    className="CourseForm form-horizontal"
                     onSubmit={this.handleSubmit}
                     >
                       <div className="form-group">
@@ -115,11 +116,18 @@ class CourseForm extends Component {
                             />
                         </div>
                       </div>
+                      <div className="buttons-container">
                       <div className="form-group">
                         <div className="col-sm-12 text-center">
                           <button className="btn btn-default">Submit</button>
                         </div>
                       </div>
+                      <div className="form-group">
+                        <div className="col-sm-12 text-center">
+                        <Link to='/home' className='btn btn-default'>Back</Link>
+                        </div>
+                        </div>
+                        </div>
                 </form>
               </div>
           )

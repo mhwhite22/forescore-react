@@ -1,13 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from './CourseListItem.css'
 
 function RoundListItem( { course } ) {
     return (
-        <div className='panel panel-default'>
-             <div className="panel-heading">
+    // <div className='panel panel-default'>
+        <div className='card blue-grey darken-2'>
+             {/* <div className="panel-heading"> */}
+             <div className="card-title">
             <h4>{course.name}</h4>
     </div>
-    <div className='panel-footer RoundListItem-action-paenl'>
+    {/* <div className='panel-footer RoundListItem-action-panel'> */}
+    <div className='card-content'>
                    <Link
                     className='btn btn-xs btn-info'
                     to={{

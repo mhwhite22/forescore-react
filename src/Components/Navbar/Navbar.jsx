@@ -6,20 +6,21 @@ import styles from './Navbar.css';
 
 function mainNavbar(props) {
     return (
-        <nav className="main-nav">
+        <nav className="main-nav nav-wrapper blue-grey darken-2">
+        <ul>
         <Link className="logo" to='/home'>ForeScore</Link>
-        <br></br>
-        <Link className="navlink" to='/rounds'>Rounds</Link>
-        <br></br>
-        <Link className="navlink" to='/courses'>Courses</Link>
-        <br></br>
-        <Link className="navlink" to='/addround'>New Round</Link>
-        <br></br>
-        <Link className="navlink" to='/addcourse'>New Course</Link>
-        <br></br>
-        <Link className="navlink" to='/home'>Profile</Link>
-        <br></br>
-        <Link className="navlink" to='' onClick={props.handleLogout}>Log Out</Link>
+        <Link className="navlink active" to='/rounds'>Rounds</Link>
+
+       <Link className="navlink active" to='/courses'>Courses</Link>
+
+        <Link className="navlink active" to='/addround'>New Round</Link>
+
+         <Link className="navlink active" to='/addcourse'>New Course</Link>
+
+        <Link className="navlink active" to='/home'>Profile</Link>
+
+        <Link className="navlink active" to='' onClick={props.handleLogout}>Log Out</Link>
+        </ul>
         </nav>
     )
 }

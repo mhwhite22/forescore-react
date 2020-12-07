@@ -8,7 +8,10 @@ function RoundsPage(props) {
     return (
         <div className='RoundsPage'>
             <Navbar />
+            <div className="pageContainer">
+            <div className="header">
             <h2>My Rounds</h2>
+            </div>
                 {props.rounds.map(round =>
                     <RoundListItem
                     round={round}
@@ -16,6 +19,7 @@ function RoundsPage(props) {
                     courses={props.courses}
                     />
                 )}
+        </div>
         </div>
     );
 }

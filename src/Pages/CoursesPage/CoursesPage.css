@@ -9,3 +9,13 @@
     flex-direction: row;
 }
 
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5em;
+}
+
+h2{
+    font-weight: bold;
+    text-decoration: underline;
+}
