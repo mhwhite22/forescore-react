@@ -2,7 +2,7 @@
     background-color: white;
     opacity: 0.9;
     height: 90%;
-    padding: 8px;
+    padding: 10px 10px 10px 10px;
 }
 
 .header{
@@ -16,6 +16,7 @@
 }
 
 .RoundForm-container{
+    background-color: transparent;
     padding-top: 2vh;
     padding-left: 15px;
     padding-right: 15px;
