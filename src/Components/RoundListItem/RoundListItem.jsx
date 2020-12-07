@@ -5,8 +5,10 @@ import { formatDate } from "../../utils/utilities";
 
 function RoundListItem( { round, courses } ) {
     return (
-        <div className='roundListItem panel panel-default'>
-             <div className="panel-heading">
+        <div className='card blue-grey darken-2'>
+        {/* <div className='roundListItem panel panel-default'> */}
+             <div className="card-title">
+             {/* <div className="panel-heading"> */}
                 <h5>{ formatDate(round.dateOfPlay) } at { courses.map((course) => { 
                     if (course._id === round.course){
                     return course.name
@@ -14,7 +16,8 @@ function RoundListItem( { round, courses } ) {
                 })
             }</h5>
            </div>
-            <div className='panel-footer RoundListItem-action-paenl'>
+            <div className='card-content'>
+            {/* <div className='panel-footer RoundListItem-action-panel'> */}
                    <Link
                     className='btn btn-xs btn-info'
                     to={{

@@ -1,5 +1,4 @@
 .main-nav{
-    background-color: #282c34;
     margin-left: 0;
     opacity: 0.8;
     color: white;
@@ -11,6 +10,7 @@
 
 .navlink{
     color: white;
+    font-weight: bold;
     text-decoration: none;
     /* padding: 20px 20px 20px 20px; */
     /* this padding was causing a misalignment of link text with the anchors they were meant to label*/
