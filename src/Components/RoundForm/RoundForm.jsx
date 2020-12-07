@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import styles from './RoundForm.css';
+import { Link } from 'react-router-dom';
 
 
 class RoundForm extends Component {
@@ -49,8 +51,8 @@ class RoundForm extends Component {
     render(){
         return(
             <div className="RoundForm-container card">
+                <header className="header">Add A New Round</header>
                 <div className="RoundForm">
-                <header className="header-footer">Add A New Round</header>
                 <form
                     ref={this.formRef}
                     className="form-horizontal"
@@ -72,7 +74,8 @@ class RoundForm extends Component {
                         <div className="col-sm-12">
                           <div className="select-container">
                           <select
-                           className="form-control"
+                           className="courseSelect browser-default form-control"
+                          //  className="form-control"
                            placeholder="Course"
                            value={this.state.formData.course}
                            name="course"
@@ -98,9 +101,16 @@ class RoundForm extends Component {
                             />
                         </div>
                     </div>
+                    <div className="buttons-container">
                     <div className="form-group">
                         <div className="col-sm-12 text-center">
                           <button className="btn btn-default">Submit</button>
+                        </div>
+                      </div>
+                        <div className="form-group">
+                        <div className="col-sm-12 text-center">
+                        <Link to='/home' className='btn btn-default'>Back</Link>
+                        </div>
                         </div>
                       </div>
                     </form>
