@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import styles from './RoundForm.css';
 import { Link } from 'react-router-dom';
+//import DatePicker from 'react-datepicker';
+
+// import "react-datepicker/dist/react-datepicker.css";
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class RoundForm extends Component {
@@ -11,7 +15,7 @@ class RoundForm extends Component {
             score: "",
             dateOfPlay: ""
         }
-    }
+      }
 
     getOptions(){
       const options = this.props.courses.map(c => ({
@@ -37,6 +41,13 @@ class RoundForm extends Component {
         }
       };
     
+    handleDateChange(date) {
+      this.setState({
+        formData: {
+          dateOfPlay: date
+        }
+      });
+    }
     
     handleChange = (e) => {
         const formData = {
@@ -59,8 +70,14 @@ class RoundForm extends Component {
                     onSubmit={this.handleSubmit}
                     >
                     <div className="form-group">
-                        <div className="col-sm-12">
-                            <input
+                         <div className="col-sm-12">
+                         {/* <DatePicker
+              selected={ this.state.formData.dateOfPlay }
+              onChange={ this.handleDateChange }
+              name="dateOfPlay"
+              dateFormat="MM/dd/yyyy"
+          /> */}
+                           <input
                             type="text"
                             className="form-control"
                             placeholder="Date of Play"

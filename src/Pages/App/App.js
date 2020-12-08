@@ -3,7 +3,6 @@ import './App.css';
 import { Route, Switch, Redirect } from "react-router-dom";
 import userService from "../../utils/userService";
 import HomePage from "../../Pages/HomePage/HomePage";
-import Navbar from "../../Components/Navbar/Navbar";
 import LandingPage from "../../Pages/LandingPage/LandingPage";
 import CoursesPage from "../../Pages/CoursesPage/CoursesPage";
 import RoundsPage from "../../Pages/RoundsPage/RoundsPage";
@@ -82,7 +81,13 @@ class App extends Component {
         <Switch>
           <Route
           exact path="/"
-          render={() => <LandingPage /> }
+          render={( {history }) =>
+          userService.getUser() ? (
+            <Redirect to="/home" />
+            ) : (
+              <LandingPage />
+            )
+          }
           />
           <Route
             exact

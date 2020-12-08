@@ -1,7 +1,6 @@
 .CourseListItem {
     padding-left: 10px;
     background-color: transparent;
-    opacity: 0.9;
     display: flex;
     flex-direction: column;
     align-items: center;
