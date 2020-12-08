@@ -8,7 +8,7 @@ const CoursesPage = (props) => {
         <div className='CoursesPage'>
             <Navbar />
             <div className='pageContainer'>
-            <h2>My Courses </h2>
+            <h4>My Courses </h4>
                 {props.courses.map(course =>
                     <CourseListItem
                     course={course}

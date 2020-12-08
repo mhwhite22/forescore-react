@@ -10,7 +10,7 @@ function RoundsPage(props) {
             <Navbar />
             <div className="pageContainer">
             <div className="header">
-            <h2>My Rounds</h2>
+            <h4>My Rounds</h4>
             </div>
                 {props.rounds.map(round =>
                     <RoundListItem

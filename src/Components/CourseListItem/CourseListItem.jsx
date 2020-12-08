@@ -5,10 +5,11 @@ import styles from './CourseListItem.css'
 function RoundListItem( { course } ) {
     return (
     // <div className='panel panel-default'>
-        <div className='card blue-grey darken-2'>
+        <div className="CourseListItem">
+        <div className='courseCard card blue-grey darken-2'>
              {/* <div className="panel-heading"> */}
              <div className="card-title">
-            <h4>{course.name}</h4>
+            {course.name}
     </div>
     {/* <div className='panel-footer RoundListItem-action-panel'> */}
     <div className='card-content'>
@@ -21,6 +22,7 @@ function RoundListItem( { course } ) {
                     >Details</Link>
                 <Link to="/rounds"></Link> 
             </div> 
+        </div>
         </div>
     )
 }

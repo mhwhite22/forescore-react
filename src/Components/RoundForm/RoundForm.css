@@ -1,14 +1,15 @@
 .RoundForm{
     background-color: white;
-    opacity: 0.9;
+    opacity: 0.8;
     height: 90%;
-    padding: 8px;
+    padding: 10px 10px 10px 10px;
 }
 
 .header{
     font-weight: bold;
     font-size: 15px;
     margin-top: 5px;
+    padding-bottom: 10px;
 }
 
 .courseSelect{
@@ -16,9 +17,11 @@
 }
 
 .RoundForm-container{
+    background-color: transparent;
     padding-top: 2vh;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 15px;
     margin-top: 20vh;
     margin-left: 5vw;
     max-height: 70vh;

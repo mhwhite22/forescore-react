@@ -1,0 +1,7 @@
+.greeting{
+    padding: 15px 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    max-height: 75vh;
+    margin-left: 2em;
+}
