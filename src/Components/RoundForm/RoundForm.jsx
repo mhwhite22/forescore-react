@@ -92,7 +92,6 @@ class RoundForm extends Component {
                           <div className="select-container">
                           <select
                            className="courseSelect browser-default form-control"
-                          //  className="form-control"
                            placeholder="Course"
                            value={this.state.formData.course}
                            name="course"

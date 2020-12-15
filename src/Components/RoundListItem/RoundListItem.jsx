@@ -16,8 +16,8 @@ function RoundListItem( { round, courses } ) {
                 })
             }</h5>
            </div>
+           <div className='buttonContainer'>
             <div className='card-content'>
-            {/* <div className='panel-footer RoundListItem-action-panel'> */}
                    <Link
                     className='btn btn-xs btn-info'
                     to={{
@@ -25,8 +25,19 @@ function RoundListItem( { round, courses } ) {
                         state: {round}
                     }}
                     >Details</Link>
-                <Link to="/rounds"></Link> 
-            </div> 
+                {/* <Link to="/rounds"></Link>  */}
+            </div>
+            <div className='card-content'>
+                   <Link
+                    className='btn btn-xs btn-info'
+                    to={{
+                        pathname: '/addscorecard',
+                        state: {round}
+                    }}
+                    >Add Scorecard</Link>
+                {/* <Link to="/rounds"></Link>  */}
+            </div>
+            </div>
         </div>
     );
 }
