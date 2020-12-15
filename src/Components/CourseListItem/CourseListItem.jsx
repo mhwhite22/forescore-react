@@ -16,7 +16,7 @@ function RoundListItem( { course } ) {
                    <Link
                     className='btn btn-xs btn-info'
                     to={{
-                        pathname: '/details',
+                        pathname: '/coursedetails',
                         state: {course}
                     }}
                     >Details</Link>

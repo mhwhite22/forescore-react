@@ -3,7 +3,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  font-family: "lucida Grande", Helvetica, Arial, sans-serif;
+  /* font-family: "lucida Grande", Helvetica, Arial, sans-serif; */
+  font-family: 'Lato', sans-serif;
   color: white;
 }
 
