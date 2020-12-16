@@ -5,7 +5,7 @@ import { formatDate } from "../../utils/utilities";
 
 function RoundListItem( { round, courses } ) {
     return (
-        <div className='card blue-grey darken-2'>
+        <div className='roundListItem card blue-grey darken-2'>
         {/* <div className='roundListItem panel panel-default'> */}
              <div className="card-title">
              {/* <div className="panel-heading"> */}

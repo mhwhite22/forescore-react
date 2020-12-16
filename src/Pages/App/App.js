@@ -8,6 +8,7 @@ import CoursesPage from "../../Pages/CoursesPage/CoursesPage";
 import RoundsPage from "../../Pages/RoundsPage/RoundsPage";
 import RoundFormPage from "../../Pages/RoundFormPage/RoundFormPage";
 import CourseFormPage from "../../Pages/CourseFormPage/CourseFormPage";
+import CourseDetailPage from "../../Pages/CourseDetailPage/CourseDetailPage";
 import ProfilePage from "../../Pages/ProfilePage/ProfilePage";
 import LoginPage from "../../Pages/LoginPage/LoginPage";
 import SignupPage from "../../Pages/SignupPage/SignupPage";
@@ -175,6 +176,16 @@ class App extends Component {
           exact path="/profile"
           render={() => <ProfilePage />}
           />
+          <Route 
+          exact path="/coursedetails"
+          render={( { location } ) =>
+            userService.getUser() ? (
+              <CourseDetailPage location={location} />
+            ) : (
+              <Redirect to="/" />
+            )
+            }
+            />
         </Switch>
 
       </div>
