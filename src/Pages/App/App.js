@@ -14,6 +14,7 @@ import LoginPage from "../../Pages/LoginPage/LoginPage";
 import SignupPage from "../../Pages/SignupPage/SignupPage";
 import * as roundsAPI from "../../services/rounds-api";
 import * as coursesAPI from "../../services/courses-api";
+import ScorecardFormPage from '../ScorecardFormPage/ScorecardFormPage';
 
 class App extends Component {
   constructor() {
@@ -186,6 +187,16 @@ class App extends Component {
             )
             }
             />
+          <Route 
+          exact path="/addscorecard"
+          render={( { location }) =>
+            userService.getUser() ? (
+              <ScorecardFormPage location={location} />
+            ) : (
+              <Redirect to="/" />
+            )
+            }
+          />
         </Switch>
 
       </div>

@@ -6,9 +6,7 @@ import { formatDate } from "../../utils/utilities";
 function RoundListItem( { round, courses } ) {
     return (
         <div className='roundListItem card blue-grey darken-2'>
-        {/* <div className='roundListItem panel panel-default'> */}
              <div className="card-title">
-             {/* <div className="panel-heading"> */}
                 <h5>{ formatDate(round.dateOfPlay) } at { courses.map((course) => { 
                     if (course._id === round.course){
                     return course.name
@@ -18,6 +16,9 @@ function RoundListItem( { round, courses } ) {
            </div>
            <div className='buttonContainer'>
             <div className='card-content'>
+                {/* if a scorecard exists, render "details" button that links to scorecard info
+                else, render Add a scorecard button with a link to the add scorecard page
+                and pass it the round info */}
                    <Link
                     className='btn btn-xs btn-info'
                     to={{
