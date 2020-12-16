@@ -178,9 +178,9 @@ class App extends Component {
           />
           <Route 
           exact path="/coursedetails"
-          render={( {history} ) =>
+          render={( { location } ) =>
             userService.getUser() ? (
-              <CourseDetailPage />
+              <CourseDetailPage location={location} />
             ) : (
               <Redirect to="/" />
             )
