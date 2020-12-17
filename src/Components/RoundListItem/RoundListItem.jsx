@@ -4,6 +4,7 @@ import styles from './RoundListItem.css';
 import { formatDate } from "../../utils/utilities";
 import { render } from '@testing-library/react';
 import RoundListButton from '../RoundListButton/RoundListButton';
+import ScoreDisplay from '../ScoreDisplay/ScoreDisplay';
 
 function RoundListItem( { round, courses } ) {
     return (
@@ -18,6 +19,7 @@ function RoundListItem( { round, courses } ) {
            </div>
            <div className='buttonContainer'>
                <RoundListButton round={round} />
+               <ScoreDisplay props={round} />
              {/* <div className='card-content'>
                     <Link
                      className='btn btn-xs btn-info'
