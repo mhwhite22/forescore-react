@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './RoundListItem.css';
 import { formatDate } from "../../utils/utilities";
 import { render } from '@testing-library/react';
+import RoundListButton from '../RoundListButton/RoundListButton';
 
 function RoundListItem( { round, courses } ) {
     return (
@@ -16,10 +17,8 @@ function RoundListItem( { round, courses } ) {
             }</h5>
            </div>
            <div className='buttonContainer'>
-             <div className='card-content'>
-                 {/* if a scorecard exists, render "details" button that links to scorecard info
-                 else, render Add a scorecard button with a link to the add scorecard page
-                 and pass it the round info */}
+               <RoundListButton round={round} />
+             {/* <div className='card-content'>
                     <Link
                      className='btn btn-xs btn-info'
                      to={{
@@ -27,8 +26,8 @@ function RoundListItem( { round, courses } ) {
                          state: {round}
                      }}
                      >Details</Link>
-             </div> 
-             <div className='card-content'>
+             </div>  */}
+             {/* <div className='card-content'>
                       <Link
                      className='btn btn-xs btn-info'
                  to={{
@@ -36,8 +35,8 @@ function RoundListItem( { round, courses } ) {
                          state: {round}
                      }}
                      >Add Scorecard</Link>
-             </div>
-            </div>
+             </div>*/}
+            </div> 
         </div>
     );
 }
