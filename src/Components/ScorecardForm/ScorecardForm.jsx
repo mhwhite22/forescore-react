@@ -45,9 +45,14 @@ class ScorecardForm extends Component {
 
     render(){
         return(
-            <div className="ScorecardForm">
-                
+          <div className="scorecardForm-container">
+            <div className="scorecardForm">
+                <header>Add A Scorecard</header>
+                <form>
+                  <input type="text" placeholder="I'm an input on a form"></input>
+                </form>
 
+            </div>
             </div>
         )
     }
