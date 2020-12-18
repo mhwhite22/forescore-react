@@ -7,13 +7,14 @@ class ScorecardFormPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            round: this.props.location.round
         }
     }
     render() {
         return(
             <div className="ScorecardFormPage">
             <Navbar />
-            <ScorecardForm { ...this.props } />
+            <ScorecardForm round={this.round}/>
             </div>
         );
     }
