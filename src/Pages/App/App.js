@@ -38,6 +38,11 @@ class App extends Component {
     return today.toLocaleDateString(undefined, options);
   }
 
+  handleAddScorecard = async (newScorecardData) => {
+    const newScorecard = await scorecardsAPI.create(newScorecardData)
+    // more stuff to come
+  }
+
   handleAddRound = async (newRoundData) => {
     const newRound = await roundsAPI.create(newRoundData);
     this.setState(

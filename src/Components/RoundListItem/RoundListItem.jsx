@@ -19,7 +19,7 @@ function RoundListItem( { round, courses } ) {
            </div>
            <div className='buttonContainer'>
                <RoundListButton round={round} />
-               <ScoreDisplay props={round} />
+               <ScoreDisplay round={round} />
              {/* <div className='card-content'>
                     <Link
                      className='btn btn-xs btn-info'
