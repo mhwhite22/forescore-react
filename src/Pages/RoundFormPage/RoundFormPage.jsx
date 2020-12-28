@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './RoundFormPage.css';
-import Navbar from '../../Components/Navbar/Navbar';
-import RoundForm from "../../Components/RoundForm/RoundForm";
+import Navbar from '../../components/Navbar/Navbar';
+import RoundForm from "../../components/RoundForm/RoundForm";
 
 class RoundFormPage extends Component {
     constructor(props) {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './ScorecardFormPage.css';
-import Navbar from '../../Components/Navbar/Navbar';
-import ScorecardForm from "../../Components/ScorecardForm/ScorecardForm";
+import Navbar from '../../components/Navbar/Navbar';
+import ScorecardForm from "../../components/ScorecardForm/ScorecardForm";
 
 class ScorecardFormPage extends Component {
     constructor(props) {

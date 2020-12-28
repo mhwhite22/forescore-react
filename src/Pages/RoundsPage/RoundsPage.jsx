@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '../../Components/Navbar/Navbar';
-import RoundListItem from '../../Components/RoundListItem/RoundListItem';
+import Navbar from '../../components/Navbar/Navbar';
+import RoundListItem from '../../components/RoundListItem/RoundListItem';
 import styles from './RoundsPage.css'
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CoursesPage.css'
-import Navbar from '../../Components/Navbar/Navbar';
-import CourseListItem from '../../Components/CourseListItem/CourseListItem';
+import Navbar from '../../components/Navbar/Navbar';
+import CourseListItem from '../../components/CourseListItem/CourseListItem';
 
 const CoursesPage = (props) => {
     return (

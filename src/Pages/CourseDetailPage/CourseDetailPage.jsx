@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CourseDetailPage.css';
-import Navbar from '../../Components/Navbar/Navbar';
-import CourseDetailCard from '../../Components/CourseDetailCard/CourseDetailCard';
+import Navbar from '../../components/Navbar/Navbar';
+import CourseDetailCard from '../../components/CourseDetailCard/CourseDetailCard';
 
 
 const CourseDetailPage = (props) => {

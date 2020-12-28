@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from "../../Components/Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 import styles from "./HomePage.css"
-import Footer from "../../Components/Footer/Footer";
-import Greeting from "../../Components/Greeting/Greeting";
+import Footer from "../../components/Footer/Footer";
+import Greeting from "../../components/Greeting/Greeting";
 
 
 const HomePage = (props) => {

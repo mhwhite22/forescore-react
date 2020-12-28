@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './CourseFormPage.css';
-import Navbar from '../../Components/Navbar/Navbar';
-import CourseForm from '../../Components/CourseForm/CourseForm';
+import Navbar from '../../components/Navbar/Navbar';
+import CourseForm from '../../components/CourseForm/CourseForm';
 
 
 class CourseFormPage extends Component {
