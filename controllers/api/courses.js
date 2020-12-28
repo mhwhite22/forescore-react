@@ -1,5 +1,5 @@
 const Course = require('../../models/course');
-//const { default: CourseForm } = require('../../src/Components/CourseForm/CourseForm');
+//const { default: CourseForm } = require('../../src/components/CourseForm/CourseForm');
 
 module.exports = {
     create,

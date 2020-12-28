@@ -1,5 +1,5 @@
 const Round = require('../../models/round');
-//const { default: RoundForm } = require('../../src/Components/RoundForm/RoundForm');
+//const { default: RoundForm } = require('../../src/components/RoundForm/RoundForm');
 
 module.exports = {
     create,
