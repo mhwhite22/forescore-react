@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, Switch, Redirect } from "react-router-dom";
-import userService from "../../utils/userService.js";
+import userService from "../../../utils/userService.js";
 import HomePage from "../../Pages/HomePage/HomePage";
 import LandingPage from "../../Pages/LandingPage/LandingPage";
 import CoursesPage from "../../Pages/CoursesPage/CoursesPage";
