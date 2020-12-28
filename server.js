@@ -8,8 +8,8 @@ const app = express();
 require("dotenv").config();
 require("./config/database");
 
-const coursesRouter = require("./routes/api/courses")
-const roundsRouter = require("./routes/api/rounds")
+// const coursesRouter = require("./routes/api/courses")
+// const roundsRouter = require("./routes/api/rounds")
 
 app.use(logger('dev'));
 app.use(express.json());
