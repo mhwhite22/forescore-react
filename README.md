@@ -2,16 +2,13 @@
 ## Marshal White
 ##### with Mongoose, Express, React, & Node.js
 
-
-
-![alt text](public/images/readmess.png)
-
+[Imgur](https://i.imgur.com/6md0ONJ.png)
 
 
 "Fore!" is the traditional call made by a golfer who has hit an errant shot, to warn players on the same or adjacent holes who may be endangered by said shot.  ForeScore React is the second iteration of the first website I ever designed and built myself, with a clean and modern look and a better user experience.
 
 
-
+[ForeScore React on Heroku](https://forescore-react.herokuapp.com/addround)
 
 [Vanilla ForeScore on Heroku](https://forescoremw.herokuapp.com/)
 
