@@ -31,7 +31,8 @@ class LoginPage extends Component {
       <div className="LoginPage">
         <h3>ForeScore</h3>
         <header className="header-footer">Log In</header>
-        <form className="form-horizontal" onSubmit={this.handleSubmit}>
+        <form className="loginForm form-horizontal blue-grey" onSubmit={this.handleSubmit}>
+          <div className="formContainer">
           <div className="form-group">
             <div className="col-sm-12">
               <input
@@ -57,11 +58,11 @@ class LoginPage extends Component {
             </div>
           </div>
           <div className="form-group">
-            <div className="col-sm-12 text-center">
+            <div className=" buttonContainer col-sm-12 text-center">
               <button className="btn btn-default">Log In</button>
-              &nbsp;&nbsp;&nbsp;
-              <Link to="/">Cancel</Link>
+              <Link className="btn btn-default" to="/">Cancel</Link>
             </div>
+          </div>
           </div>
         </form>
       </div>
