@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import userService from "../../utils/userService";
+import styles from "./SignupForm.css";
 
 class SignupForm extends Component {
   state = {
@@ -40,7 +41,8 @@ class SignupForm extends Component {
     return (
         <div className="SignupForm">
           <header className="header-footer">Sign Up</header>
-          <form className="form-horizontal" onSubmit={this.handleSubmit}>
+          <div className="formContainer">
+          <form className="signupformform form-horizontal" onSubmit={this.handleSubmit}>
             <div className="form-group">
               <div className="col-sm-12">
                 <input
@@ -91,6 +93,7 @@ class SignupForm extends Component {
             </div>
             <div className="form-group">
               <div className="col-sm-12 text-center">
+                <div className="btnContainer">
                 <button
                   className="btn btn-default"
                   disabled={this.isFormInvalid()}
@@ -98,10 +101,12 @@ class SignupForm extends Component {
                   Sign Up
                 </button>
                 &nbsp;&nbsp;
-                <Link to="/">Cancel</Link>
+                <Link className="btn btn-default" to="/">Cancel</Link>
+                </div>
               </div>
             </div>
           </form>
+          </div>
         </div>
     );
   }

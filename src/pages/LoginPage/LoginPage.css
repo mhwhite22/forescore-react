@@ -11,3 +11,27 @@
     color: white;
 }
 
+.header-footer{
+    font-size: 25px;
+}
+
+.loginForm{
+    width: 25vw;
+    height: 25vw;
+    opacity: 0.97;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.formContainer{
+    width: 95%;
+    height: 95%;
+    display: flex;
+    background-color: white;
+    opacity: 0.9;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
