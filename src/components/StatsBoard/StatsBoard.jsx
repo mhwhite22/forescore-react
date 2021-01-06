@@ -7,6 +7,7 @@ function StatsBoard(props) {
         // render multiple components with calculated stat values based on characteristics
         /// of recent rounds and their attendant scorecards
         <div className="StatsBoard">
+            <p>Placeholder Data</p>
             <ul>
             <li>Average Score past month: 78</li>
             <li>40% of Rounds Played at Jefferson Park</li>
