@@ -9,7 +9,6 @@ import RoundsPage from "../RoundsPage/RoundsPage";
 import RoundFormPage from "../RoundFormPage/RoundFormPage";
 import CourseFormPage from "../CourseFormPage/CourseFormPage";
 import CourseDetailPage from "../CourseDetailPage/CourseDetailPage";
-import ProfilePage from "../ProfilePage/ProfilePage";
 import LoginPage from "../LoginPage/LoginPage";
 import SignupPage from "../SignupPage/SignupPage";
 import * as roundsAPI from "../../services/rounds-api";
@@ -179,10 +178,10 @@ class App extends Component {
             )
             }
           />
-          <Route
+          {/* <Route
           exact path="/profile"
           render={() => <ProfilePage />}
-          />
+          /> */}
           <Route 
           exact path="/coursedetails"
           render={( { location } ) =>
